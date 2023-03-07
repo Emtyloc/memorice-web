@@ -23,8 +23,8 @@ nav {
 
 nav div {
   background-color: blue;
-  width: 10%;
-  height: 30%;
+  width: fit-content;
+  height: fit-content;
   text-align: center;
   margin: auto;
 }
@@ -43,13 +43,22 @@ nav div {
 
 .card {
   width: calc(16.667% - 10px);
-  height: calc(33.333% - 10px);
+  height: calc(16.667% - 10px);
   margin: 5px;
   position: relative;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   background-color: antiquewhite;
   font-size: larger;
   font-weight: bold;
+}
+
+.card .figure {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 40px;
 }
 
 @media screen and (max-height: 720px) {
@@ -63,6 +72,7 @@ nav div {
     width: calc(100% - 10px);
     height: calc(100% - 85px);
     max-height: none;
+    min-height: 700px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -70,8 +80,8 @@ nav div {
   }
 
   .card {
-    width: calc(33.333% - 10px);
-    height: calc(16.667% - 10px);
+    width: calc(25% - 10px);
+    height: calc(12.5% - 10px);
     margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
