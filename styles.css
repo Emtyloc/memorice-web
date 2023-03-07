@@ -48,8 +48,6 @@ nav div {
   position: relative;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   background-color: antiquewhite;
-  font-size: larger;
-  font-weight: bold;
 }
 
 .card .figure {
@@ -58,7 +56,7 @@ nav div {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 @media screen and (max-height: 720px) {
@@ -81,7 +79,7 @@ nav div {
 
   .card {
     width: calc(25% - 10px);
-    height: calc(12.5% - 10px);
+    height: calc(11.11% - 10px);
     margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
