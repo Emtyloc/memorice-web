@@ -36,6 +36,7 @@ footer {
 footer .score-tables {
   background-color: aliceblue;
   display: flex;
+  flex-wrap: wrap;
 }
 
 footer h2 {
