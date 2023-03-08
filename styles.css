@@ -109,10 +109,10 @@ footer h2 {
 }
 
 /* tarjetas volteadas para entrega */
-.card:nth-of-type(1) .figure-up {
+.card:nth-of-type(4) .figure-up {
   display: flex;
 }
-.card:nth-of-type(1) .figure-down {
+.card:nth-of-type(4) .figure-down {
   display: none;
 }
 .card:nth-of-type(8) .figure-up {
