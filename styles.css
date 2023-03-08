@@ -36,6 +36,7 @@ nav div {
   max-height: 640px;
   min-height: 350px;
   margin: auto;
+  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
   /* background-color: rgb(110, 84, 48); */
@@ -75,6 +76,7 @@ nav div {
     max-height: none;
     min-height: 700px;
     margin: auto;
+    margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
     /* background-color: rgb(110, 84, 48); */
