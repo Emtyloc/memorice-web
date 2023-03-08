@@ -22,11 +22,14 @@ nav {
 }
 
 nav div {
-  background-color: blue;
   width: fit-content;
   height: fit-content;
   text-align: center;
   margin: auto;
+  font-family: monospace;
+  font-size: xx-large;
+  color: #fff653;
+  text-shadow: 0 0 7px #fbf116, 0 0 10px #fbf116, 0 0 21px #fbf116;
 }
 
 footer {
