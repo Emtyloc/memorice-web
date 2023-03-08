@@ -51,24 +51,38 @@ footer header {
   color: aqua;
 }
 
+th {
+  padding: 0 8px 0 8px;
+}
+
+td {
+  padding: 8px;
+  text-align: center;
+}
+
 .table-title {
   font-size: xx-large;
-  background-color: aliceblue;
 }
 
 .config-1 {
   background-color: blueviolet;
   margin: auto;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .config-2 {
   background-color: bisque;
   margin: auto;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .config-3 {
   background-color: brown;
   margin: auto;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .cards-table {
