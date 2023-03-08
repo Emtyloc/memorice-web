@@ -53,7 +53,7 @@ nav div {
   background-color: antiquewhite;
 }
 
-.card .figure {
+.card .figure-up {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -61,6 +61,34 @@ nav div {
   height: 100%;
   font-size: 30px;
   border-radius: 12px;
+  display: none;
+}
+
+.card .figure-down {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 30px;
+  border-radius: 12px;
+}
+
+/* tarjetas volteadas para entrega */
+.card:nth-of-type(1) .figure-up {
+  display: flex;
+}
+
+.card:nth-of-type(1) .figure-down {
+  display: none;
+}
+
+.card:nth-of-type(8) .figure-up {
+  display: flex;
+}
+
+.card:nth-of-type(8) .figure-down {
+  display: none;
 }
 
 @media screen and (max-height: 720px) {
