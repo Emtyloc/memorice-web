@@ -29,6 +29,10 @@ nav div {
   margin: auto;
 }
 
+footer {
+  background-color: aqua;
+}
+
 .cards-table {
   width: calc(100% - 10px);
   height: calc(100% - 85px);
@@ -78,15 +82,12 @@ nav div {
 .card:nth-of-type(1) .figure-up {
   display: flex;
 }
-
 .card:nth-of-type(1) .figure-down {
   display: none;
 }
-
 .card:nth-of-type(8) .figure-up {
   display: flex;
 }
-
 .card:nth-of-type(8) .figure-down {
   display: none;
 }
@@ -96,7 +97,7 @@ nav div {
     margin: auto;
   }
 }
-
+/* phone vertical view */
 @media (orientation: portrait) {
   .cards-table {
     width: calc(100% - 10px);
