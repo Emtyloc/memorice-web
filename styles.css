@@ -50,7 +50,6 @@ footer h2 {
 .config-1 {
   background-color: blueviolet;
   margin: auto;
-  margin-left: 25%;
 }
 
 .config-2 {
@@ -61,7 +60,6 @@ footer h2 {
 .config-3 {
   background-color: brown;
   margin: auto;
-  margin-right: 25%;
 }
 
 .cards-table {
