@@ -33,6 +33,37 @@ footer {
   background-color: aqua;
 }
 
+footer .score-tables {
+  background-color: aliceblue;
+  display: flex;
+}
+
+footer h2 {
+  text-align: center;
+}
+
+.table-title {
+  font-size: xx-large;
+  background-color: aliceblue;
+}
+
+.config-1 {
+  background-color: blueviolet;
+  margin: auto;
+  margin-left: 25%;
+}
+
+.config-2 {
+  background-color: bisque;
+  margin: auto;
+}
+
+.config-3 {
+  background-color: brown;
+  margin: auto;
+  margin-right: 25%;
+}
+
 .cards-table {
   width: calc(100% - 10px);
   height: calc(100% - 85px);
@@ -41,10 +72,11 @@ footer {
   min-height: 350px;
   margin: auto;
   margin-top: 5px;
+  margin-bottom: 5px;
   display: flex;
   flex-wrap: wrap;
   /* background-color: rgb(110, 84, 48); */
-  margin-top: calc(50vh - 360px);
+  /* margin-top: calc(50vh - 360px); */
 }
 
 .card {
