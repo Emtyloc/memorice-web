@@ -34,6 +34,10 @@ nav div {
   text-shadow: 0 0 7px #fbf116, 0 0 10px #fbf116;
 }
 
+#game-title {
+  font-size: 3em;
+}
+
 footer {
   margin-top: 20px;
 }
@@ -50,6 +54,13 @@ footer header {
   font-size: xx-large;
   font-weight: 600;
   color: aqua;
+}
+
+#creditos {
+  height: 50px;
+  text-align: end;
+  margin-top: 20px;
+  background-color: aliceblue;
 }
 
 th {
@@ -73,6 +84,8 @@ td {
 .config-1 {
   background-color: blueviolet;
   margin: auto;
+  margin-top: 0;
+  margin-bottom: 5px;
   border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
 }
@@ -80,6 +93,8 @@ td {
 .config-2 {
   background-color: bisque;
   margin: auto;
+  margin-top: 0;
+  margin-bottom: 5px;
   border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
 }
@@ -87,6 +102,7 @@ td {
 .config-3 {
   background-color: brown;
   margin: auto;
+  margin-top: 0;
   border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
 }
@@ -159,6 +175,10 @@ td {
 }
 /* phone vertical view */
 @media (orientation: portrait) {
+  #game-title {
+    font-size: 2.5em;
+  }
+
   .cards-table {
     width: calc(100% - 10px);
     height: calc(100% - 85px);
