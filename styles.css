@@ -64,6 +64,11 @@ td {
   font-size: xx-large;
 }
 
+.score-tables {
+  max-width: 800px;
+  margin: auto;
+}
+
 .config-1 {
   background-color: blueviolet;
   margin: auto;
