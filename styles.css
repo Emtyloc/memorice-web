@@ -71,14 +71,18 @@ footer header {
   margin-bottom: 5px;
 }
 
-footer .score-tables-tries {
+#score-tables-tries {
   display: flex;
   flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
 }
 
-footer .score-tables-time {
-  display: flex;
+#score-tables-time {
+  display: none;
   flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
 }
 
 #creditos {
@@ -121,16 +125,6 @@ td {
 
 .table-title {
   font-size: xx-large;
-}
-
-.score-tables-tries {
-  max-width: 800px;
-  margin: auto;
-}
-
-.score-tables-time {
-  max-width: 800px;
-  margin: auto;
 }
 
 .config-1 {
