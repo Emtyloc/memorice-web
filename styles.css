@@ -77,6 +77,28 @@ footer header {
   background-color: aliceblue;
 }
 
+/* crazy table with rounded corners and bottom border at second child */
+/* https://unused-css.com/blog/css-rounded-table-corners/ */
+table {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+table > thead > tr:nth-child(2) > th,
+table > thead > tr:nth-child(2) > td,
+table > tbody > tr:nth-child(2) > th,
+table > tbody > tr:nth-child(2) > td,
+table > tfoot > tr:nth-child(2) > th,
+table > tfoot > tr:nth-child(2) > td,
+table > tr:nth-child(2) > td,
+table > tr:nth-child(2) > th,
+table > thead:nth-child(2),
+table > tbody:nth-child(2),
+table > tfoot:nth-child(2) {
+  border-bottom: 1px solid black;
+}
+
 th {
   padding: 0 8px 0 8px;
 }
@@ -100,7 +122,6 @@ td {
   margin: auto;
   margin-top: 0;
   margin-bottom: 5px;
-  border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -109,7 +130,6 @@ td {
   margin: auto;
   margin-top: 0;
   margin-bottom: 5px;
-  border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -117,7 +137,6 @@ td {
   background-color: coral;
   margin: auto;
   margin-top: 0;
-  border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
 }
 
