@@ -21,6 +21,7 @@ nav {
   height: 80px;
   background-color: #2b2c6d;
   display: flex;
+  border-bottom: 0.2rem solid #bc13fe;
 }
 
 nav div {
@@ -28,14 +29,25 @@ nav div {
   height: fit-content;
   text-align: center;
   margin: auto;
-  font-family: monospace;
-  font-size: xx-large;
+  font-size: 2.5rem;
   color: #fff653;
+  text-shadow: 0 0 7px #fbf116;
+}
+
+nav .nav-title {
+  text-decoration: underline;
+  font-size: 1.3rem;
+  font-family: monospace;
   text-shadow: 0 0 7px #fbf116, 0 0 10px #fbf116;
 }
 
 #game-title {
   font-size: 3em;
+  font-family: "Brush Script MT", cursive;
+  color: #fff;
+  text-shadow: 0 0 7px #bc13fe, 0 0 21px #bc13fe, 0 0 42px #bc13fe,
+    0 0 82px #bc13fe;
+  min-width: 8ch;
 }
 
 footer {
@@ -50,10 +62,12 @@ footer .score-tables {
 footer header {
   margin-bottom: 10px;
   text-align: center;
-  font-family: monospace;
-  font-size: xx-large;
-  font-weight: 600;
+  text-decoration: underline;
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.5rem;
+  font-weight: 500;
   color: aqua;
+  text-shadow: 0 0 7px rgb(165, 255, 255);
 }
 
 #creditos {
