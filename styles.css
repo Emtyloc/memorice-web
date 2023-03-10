@@ -66,9 +66,30 @@ footer header {
 }
 
 #honor-buttons-div {
-  background-color: #bc13fe;
   text-align: center;
   margin-bottom: 5px;
+}
+
+#intentos-btn {
+  font-size: medium;
+  cursor: pointer;
+  padding: 0.4em;
+  color: #fff;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#honor-buttons-div span:nth-of-type(2) {
+  color: #fff;
+}
+
+#tiempos-btn {
+  font-size: medium;
+  cursor: pointer;
+  padding: 0.4em;
+  color: #fff;
+  text-decoration: underline;
+  font-style: italic;
 }
 
 #score-tables-tries {

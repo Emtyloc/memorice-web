@@ -1,5 +1,5 @@
 const triesBtn = document.getElementById("intentos-btn");
-const timesBtn = document.getElementById("tiempo-btn");
+const timesBtn = document.getElementById("tiempos-btn");
 
 triesBtn.onclick = () => {
   document.getElementById("score-tables-tries").style.display = "flex";
