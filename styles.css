@@ -54,11 +54,6 @@ footer {
   margin-top: 20px;
 }
 
-footer .score-tables {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 footer header {
   margin-bottom: 10px;
   text-align: center;
@@ -68,6 +63,22 @@ footer header {
   font-weight: 500;
   color: aqua;
   text-shadow: 0 0 7px rgb(165, 255, 255);
+}
+
+#honor-buttons-div {
+  background-color: #bc13fe;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+footer .score-tables-tries {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .score-tables-time {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #creditos {
@@ -112,7 +123,12 @@ td {
   font-size: xx-large;
 }
 
-.score-tables {
+.score-tables-tries {
+  max-width: 800px;
+  margin: auto;
+}
+
+.score-tables-time {
   max-width: 800px;
   margin: auto;
 }
@@ -123,6 +139,7 @@ td {
   margin-top: 0;
   margin-bottom: 5px;
   font-family: "Courier New", Courier, monospace;
+  min-width: 180px;
 }
 
 .config-2 {
@@ -131,6 +148,7 @@ td {
   margin-top: 0;
   margin-bottom: 5px;
   font-family: "Courier New", Courier, monospace;
+  min-width: 180px;
 }
 
 .config-3 {
@@ -138,6 +156,7 @@ td {
   margin: auto;
   margin-top: 0;
   font-family: "Courier New", Courier, monospace;
+  min-width: 180px;
 }
 
 .cards-table {
