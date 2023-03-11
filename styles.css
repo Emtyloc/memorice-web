@@ -18,23 +18,29 @@ body {
 
 nav {
   width: 100%;
-  height: 80px;
+  height: 120px;
   background-color: #2b2c6d;
-  display: flex;
   border-bottom: 0.2rem solid #bc13fe;
 }
 
-nav div {
-  width: fit-content;
-  height: fit-content;
-  text-align: center;
+nav > div {
   margin: auto;
+}
+
+#top-nav-div {
+  display: flex;
+  width: 100%;
   font-size: 2.5rem;
+  text-align: center;
   color: #fff653;
   text-shadow: 0 0 7px #fbf116;
 }
 
-nav .nav-title {
+#top-nav-div div {
+  margin: auto;
+}
+
+#top-nav-div .nav-title {
   text-decoration: underline;
   font-size: 1.3rem;
   font-family: monospace;
@@ -42,12 +48,28 @@ nav .nav-title {
 }
 
 #game-title {
-  font-size: 3em;
+  font-size: 1.5em;
   font-family: "Brush Script MT", cursive;
   color: #fff;
   text-shadow: 0 0 7px #bc13fe, 0 0 21px #bc13fe, 0 0 42px #bc13fe,
     0 0 82px #bc13fe;
   min-width: 8ch;
+}
+
+#settings-btn {
+  font-size: small;
+}
+
+/* bottom side of nav bar for settings */
+#config-nav-div {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#config-nav-div div {
+  margin: auto;
 }
 
 footer {
@@ -245,7 +267,7 @@ td {
 /* phone vertical view */
 @media (orientation: portrait) {
   #game-title {
-    font-size: 2.5em;
+    font-size: 1em;
   }
 
   .cards-table {
