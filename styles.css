@@ -75,8 +75,11 @@ footer header {
   cursor: pointer;
   padding: 0.4em;
   color: #fff;
-  text-decoration: underline;
   font-style: italic;
+}
+
+.selected-table-btn {
+  text-decoration: underline;
 }
 
 #honor-buttons-div span:nth-of-type(2) {
