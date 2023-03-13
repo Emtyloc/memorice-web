@@ -117,17 +117,23 @@ footer header {
 }
 
 #score-tables-tries {
-  display: flex;
   flex-wrap: wrap;
   max-width: 800px;
   margin: auto;
 }
 
 #score-tables-time {
-  display: none;
   flex-wrap: wrap;
   max-width: 800px;
   margin: auto;
+}
+
+.showing-table {
+  display: flex;
+}
+
+.hidding-table {
+  display: none;
 }
 
 #creditos {
