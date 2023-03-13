@@ -18,9 +18,9 @@ body {
 
 nav {
   width: 100%;
-  height: fit-content;
   background-color: #2b2c6d;
   border-bottom: 0.2rem solid #bc13fe;
+  user-select: none;
 }
 
 nav > div {
@@ -84,6 +84,7 @@ nav > div {
 
 footer {
   margin-top: 20px;
+  user-select: none;
 }
 
 footer header {
