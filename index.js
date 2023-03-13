@@ -1,5 +1,7 @@
 const triesBtn = document.getElementById("intentos-btn");
 const timesBtn = document.getElementById("tiempos-btn");
+const navBar = document.getElementById("top-nav-div");
+const settingsBtn = document.getElementById("settings-btn");
 
 triesBtn.onclick = () => {
   document.getElementById("score-tables-tries").classList.add("showing-table");
@@ -29,4 +31,13 @@ timesBtn.onclick = () => {
 
   triesBtn.classList.remove("selected-table-btn");
   timesBtn.classList.add("selected-table-btn");
+};
+
+navBar.onclick = () => {
+  document.getElementById("config-nav-div").classList.toggle("open-settings");
+  document.getElementById("config-nav-div").classList.toggle("close-settings");
+
+  document.getElementById("config-nav-div").classList.contains("open-settings")
+    ? (settingsBtn.innerText = "cerrar")
+    : (settingsBtn.innerText = "configuracion");
 };
