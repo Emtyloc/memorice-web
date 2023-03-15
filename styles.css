@@ -291,6 +291,7 @@ td {
   }
 
   #side-bar {
+    user-select: none;
     text-align: center;
     color: #fbf116;
     display: flex;
