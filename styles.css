@@ -27,7 +27,7 @@ nav > div {
   margin: auto;
 }
 
-.side-bar {
+#side-bar {
   display: none;
 }
 
@@ -230,8 +230,6 @@ td {
   margin-bottom: 5px;
   display: flex;
   flex-wrap: wrap;
-  /* background-color: rgb(110, 84, 48); */
-  /* margin-top: calc(50vh - 360px); */
 }
 
 .card {
@@ -286,7 +284,14 @@ td {
     width: calc(100% - 100px);
   }
 
-  .side-bar {
+  .cards-table-no-margin {
+    margin-left: auto;
+    width: 100%;
+  }
+
+  #side-bar {
+    text-align: center;
+    color: #fbf116;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -294,11 +299,41 @@ td {
     left: 0;
     height: 100%;
     width: 90px;
-    background-color: #bc13fe;
+    background-color: #2b2c6d;
+    border-right: 0.2rem solid #bc13fe;
+  }
+
+  #side-bar div {
+    font-size: xx-large;
+    margin: auto;
+  }
+
+  #side-bar .center-div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #side-bar .game-title {
+    font-size: 2em;
+    font-family: "Brush Script MT", cursive;
+    color: #fff;
+    text-shadow: 0 0 7px #bc13fe, 0 0 21px #bc13fe, 0 0 42px #bc13fe,
+      0 0 82px #bc13fe;
+  }
+
+  #side-bar .nav-title {
+    text-decoration: underline;
+    font-size: 1.3rem;
+    font-family: monospace;
+    text-shadow: 0 0 7px #fbf116, 0 0 10px #fbf116;
   }
 
   nav {
     display: none;
+  }
+
+  .hidding-sidebar {
+    display: none !important;
   }
 }
 /* phone vertical view */
