@@ -308,6 +308,7 @@ td {
   #side-bar div {
     font-size: xx-large;
     margin: auto;
+    text-shadow: 0 0 7px #fbf116, 0 0 10px #fbf116;
   }
 
   #side-bar .center-div {
