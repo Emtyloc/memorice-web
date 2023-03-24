@@ -348,7 +348,7 @@ td {
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
   }
   .cards-table-x8 .card {
@@ -373,7 +373,7 @@ td {
     max-height: none;
     min-height: 600px;
     margin: auto;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     /* background-color: rgb(110, 84, 48); */
   }
