@@ -289,15 +289,22 @@ td {
 }
 
 @media screen and (max-height: 400px) and (orientation: landscape) {
+  body {
+    margin-left: 90px;
+  }
+
   .cards-table {
-    margin-left: 170px;
-    width: calc(100% - 250px);
+    width: calc(100% - 150px);
     min-width: 400px;
   }
 
   .cards-table-no-margin {
     margin-left: auto;
     width: 100%;
+  }
+
+  #hidden-top-nav {
+    display: none;
   }
 
   #side-bar {
@@ -344,15 +351,15 @@ td {
   nav {
     display: none;
   }
-
-  #side-bar.hidding-sidebar {
-    display: none;
-  }
 }
 /* phone vertical view */
 @media (orientation: portrait) {
   #game-title {
     font-size: 1em;
+  }
+
+  #hidden-top-nav {
+    height: 72px;
   }
 
   .cards-table {

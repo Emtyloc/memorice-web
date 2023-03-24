@@ -43,30 +43,3 @@ navBar.onclick = () => {
     ? (settingsBtn.innerText = "cerrar")
     : (settingsBtn.innerText = "configuracion");
 };
-
-// appear or desappear side bar
-window.addEventListener("scroll", () => {
-  if (window.matchMedia("(orientation: landscape)").matches) {
-    if (document.documentElement.scrollTop >= 85) {
-      sideBar.classList.add("hidding-sidebar");
-      cardsTable.classList.add("cards-table-no-margin");
-    }
-
-    if (document.documentElement.scrollTop <= 15) {
-      sideBar.classList.remove("hidding-sidebar");
-      cardsTable.classList.remove("cards-table-no-margin");
-    }
-  }
-});
-let portrait = window.matchMedia("(orientation: portrait)");
-portrait.addEventListener("change", function (e) {
-  if (e.matches) {
-    sideBar.classList.add("hidding-sidebar");
-    cardsTable.classList.add("cards-table-no-margin");
-  } else {
-    if (document.documentElement.scrollTop <= 15) {
-      sideBar.classList.remove("hidding-sidebar");
-      cardsTable.classList.remove("cards-table-no-margin");
-    }
-  }
-});
