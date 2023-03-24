@@ -229,7 +229,7 @@ td {
   min-width: 180px;
 }
 
-.cards-table {
+.cards-table-x18 {
   width: calc(100% - 10px);
   height: calc(100% - 85px);
   max-width: 1000px;
@@ -297,7 +297,7 @@ td {
     margin-left: 90px;
   }
 
-  .cards-table {
+  .cards-table-x18 {
     width: calc(100% - 150px);
     min-width: 400px;
   }
@@ -366,7 +366,7 @@ td {
     height: 76px;
   }
 
-  .cards-table {
+  .cards-table-x18 {
     width: calc(100% - 10px);
     height: calc(100% - 85px);
     max-height: none;
