@@ -229,6 +229,26 @@ td {
   min-width: 180px;
 }
 
+.cards-table-x8 {
+  width: calc(40% - 10px);
+  height: calc(60% - 85px);
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: none;
+  flex-wrap: wrap;
+}
+.cards-table-x8 .card {
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
+  border-radius: 15px;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+
 .cards-table-x18 {
   width: calc(100% - 10px);
   height: calc(100% - 85px);
@@ -284,6 +304,7 @@ td {
   font-size: 35px;
   border-radius: 12px;
   display: none;
+  user-select: none;
 }
 
 .card .figure-down {
@@ -299,6 +320,7 @@ td {
   border-radius: 12px;
   padding-left: 5px;
   padding-bottom: 5px;
+  user-select: none;
 }
 
 /* tarjetas volteadas para entrega */
@@ -320,6 +342,26 @@ td {
     margin-left: 90px;
   }
 
+  .cards-table-x8 {
+    width: calc(90% - 10px);
+    height: calc(60% - 85px);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards-table-x8 .card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
+    border-radius: 15px;
+    background-color: antiquewhite;
+    cursor: pointer;
+  }
+
   .cards-table-x18 {
     width: calc(100% - 150px);
     min-width: 400px;
@@ -331,7 +373,7 @@ td {
     max-height: none;
     min-height: 600px;
     margin: auto;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     /* background-color: rgb(110, 84, 48); */
   }
@@ -404,15 +446,33 @@ td {
     height: 76px;
   }
 
+  .cards-table-x8 {
+    width: calc(100% - 10px);
+    height: calc(60% - 85px);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+    flex-wrap: wrap;
+  }
+  .cards-table-x8 .card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
+    border-radius: 15px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    user-select: none;
+  }
+
   .cards-table-x18 {
     width: calc(100% - 10px);
     height: calc(100% - 85px);
-    max-height: none;
-    min-height: 600px;
     margin: auto;
     display: none;
     flex-wrap: wrap;
-    /* background-color: rgb(110, 84, 48); */
   }
 
   .cards-table-x18 .card {
@@ -427,12 +487,9 @@ td {
   .cards-table-x32 {
     width: calc(100% - 10px);
     height: calc(160% - 85px);
-    max-height: none;
-    min-height: 600px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    /* background-color: rgb(110, 84, 48); */
   }
 
   .cards-table-x32 .card {
