@@ -36,12 +36,22 @@
         </div>
       </div>
       <div id="config-nav-div" class="close-settings">
-        <div>mode: x8,x18,x32</div>
-        <div>tema: claro/oscuro</div>
+        <div id="select-mode">
+          <div>Modo:</div>
+          <div id="mode-x8-btn" class="selected-mode-btn">x8</div>
+          <div id="mode-x18-btn">x18</div>
+          <div id="mode-x32-btn">x32</div>
+        </div>
+        <div id="select-theme">
+          <div>Tema:</div>
+          <div id="theme-light-btn" class="selected-theme-btn">Claro</div>
+          <div>/</div>
+          <div id="theme-dark-btn">Oscuro</div>
+        </div>
       </div>
     </nav>
     <div id="hidden-top-nav"></div>
-    <container class="cards-table-x8">
+    <container class="cards-table-x8 hidding-cards-table">
       <div class="card">
         <div class="figure-up">🌴</div>
         <div class="figure-down">1</div>
@@ -107,7 +117,7 @@
         <div class="figure-down">16</div>
       </div>
     </container>
-    <container class="cards-table-x18">
+    <container class="cards-table-x18 hidding-cards-table">
       <div class="card">
         <div class="figure-up">🌴</div>
         <div class="figure-down">1</div>
