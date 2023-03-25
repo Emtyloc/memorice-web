@@ -67,6 +67,10 @@ exitNavDiv.onclick = () => {
   exitNavDiv.classList.add("hidden");
 };
 
+sideBar.onclick = () => {
+  alert("Gira la pantalla para las configuraciones ⚙️.");
+};
+
 modeX8btn.onclick = () => {
   modeX8btn.classList.add("selected-mode-btn");
   modeX18btn.classList.remove("selected-mode-btn");
