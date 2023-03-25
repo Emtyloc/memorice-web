@@ -11,6 +11,8 @@ const themeDarkBtn = document.getElementById("theme-dark-btn");
 const cardsTableX8 = document.getElementsByClassName("cards-table-x8")[0];
 const cardsTableX18 = document.getElementsByClassName("cards-table-x18")[0];
 const cardsTableX32 = document.getElementsByClassName("cards-table-x32")[0];
+const figuresUp = document.getElementsByClassName("figure-up");
+const figuresDown = document.getElementsByClassName("figure-down");
 const buttons = [
   settingsBtn,
   document.getElementById("game-title"),
@@ -101,9 +103,29 @@ modeX32btn.onclick = () => {
 themeLightBtn.onclick = () => {
   themeLightBtn.classList.add("selected-theme-btn");
   themeDarkBtn.classList.remove("selected-theme-btn");
+  document.getElementsByTagName("nav")[0].classList.remove("dark-theme");
+  document.getElementById("creditos").classList.remove("dark-theme");
+  Array.prototype.forEach.call(figuresUp, function (figure) {
+    // Cambiar el color de fondo de cada elemento a verde
+    figure.classList.remove("dark-theme");
+  });
+  Array.prototype.forEach.call(figuresDown, function (figure) {
+    // Cambiar el color de fondo de cada elemento a verde
+    figure.classList.remove("dark-theme");
+  });
 };
 
 themeDarkBtn.onclick = () => {
   themeDarkBtn.classList.add("selected-theme-btn");
   themeLightBtn.classList.remove("selected-theme-btn");
+  document.getElementsByTagName("nav")[0].classList.add("dark-theme");
+  document.getElementById("creditos").classList.add("dark-theme");
+  Array.prototype.forEach.call(figuresUp, function (figure) {
+    // Cambiar el color de fondo de cada elemento a verde
+    figure.classList.add("dark-theme");
+  });
+  Array.prototype.forEach.call(figuresDown, function (figure) {
+    // Cambiar el color de fondo de cada elemento a verde
+    figure.classList.add("dark-theme");
+  });
 };
