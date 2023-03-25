@@ -13,15 +13,7 @@ const cardsTableX18 = document.getElementsByClassName("cards-table-x18")[0];
 const cardsTableX32 = document.getElementsByClassName("cards-table-x32")[0];
 const figuresUp = document.getElementsByClassName("figure-up");
 const figuresDown = document.getElementsByClassName("figure-down");
-const buttons = [
-  settingsBtn,
-  document.getElementById("game-title"),
-  modeX8btn,
-  modeX18btn,
-  modeX32btn,
-  themeLightBtn,
-  themeDarkBtn,
-];
+const exitNavDiv = document.getElementById("exit-nav-div");
 
 triesBtn.onclick = () => {
   document.getElementById("score-tables-tries").classList.add("showing-table");
@@ -60,15 +52,15 @@ navBar.onclick = () => {
   document.getElementById("config-nav-div").classList.contains("open-settings")
     ? (settingsBtn.innerText = "cerrar")
     : (settingsBtn.innerText = "configuracion");
+
+  exitNavDiv.classList.toggle("hidden");
 };
 
-document.addEventListener("click", function (event) {
-  if (event.target !== navBar && !buttons.includes(event.target)) {
-    document.getElementById("config-nav-div").classList.remove("open-settings");
-    document.getElementById("config-nav-div").classList.add("close-settings");
-    settingsBtn.innerText = "configuracion";
-  }
-});
+exitNavDiv.onclick = () => {
+  document.getElementById("config-nav-div").classList.toggle("open-settings");
+  document.getElementById("config-nav-div").classList.toggle("close-settings");
+  exitNavDiv.classList.add("hidden");
+};
 
 modeX8btn.onclick = () => {
   modeX8btn.classList.add("selected-mode-btn");

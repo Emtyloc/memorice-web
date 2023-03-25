@@ -34,12 +34,24 @@ nav {
   background-color: #2b2c6d;
   border-bottom: 0.2rem solid #bc13fe;
   user-select: none;
-  position: fixed;
+  position: absolute;
   z-index: 1;
 }
 
 nav.dark-theme {
   background-color: #1c1d52;
+}
+
+#exit-nav-div {
+  width: 100%;
+  height: 100lvh;
+  position: fixed;
+  z-index: 1;
+  margin-top: 30px;
+}
+
+#exit-nav-div.hidden {
+  display: none;
 }
 
 #hidden-top-nav {
