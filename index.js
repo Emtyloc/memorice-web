@@ -59,6 +59,11 @@ navBar.onclick = () => {
 exitNavDiv.onclick = () => {
   document.getElementById("config-nav-div").classList.toggle("open-settings");
   document.getElementById("config-nav-div").classList.toggle("close-settings");
+
+  document.getElementById("config-nav-div").classList.contains("open-settings")
+    ? (settingsBtn.innerText = "cerrar")
+    : (settingsBtn.innerText = "configuracion");
+
   exitNavDiv.classList.add("hidden");
 };
 
