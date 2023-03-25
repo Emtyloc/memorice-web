@@ -424,7 +424,7 @@ td {
 
   .cards-table-x8 {
     width: calc(90% - 10px);
-    height: calc(60% - 85px);
+    height: calc(100% - 10px);
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -484,6 +484,10 @@ td {
     width: 90px;
     background-color: #2b2c6d;
     border-right: 0.2rem solid #bc13fe;
+  }
+
+  #side-bar.dark-theme {
+    background-color: #1c1d52;
   }
 
   #side-bar div {

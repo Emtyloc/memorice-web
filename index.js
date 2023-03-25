@@ -105,6 +105,7 @@ themeLightBtn.onclick = () => {
   themeDarkBtn.classList.remove("selected-theme-btn");
   document.getElementsByTagName("nav")[0].classList.remove("dark-theme");
   document.getElementById("creditos").classList.remove("dark-theme");
+  sideBar.classList.remove("dark-theme");
   Array.prototype.forEach.call(figuresUp, function (figure) {
     // Cambiar el color de fondo de cada elemento a verde
     figure.classList.remove("dark-theme");
@@ -120,6 +121,7 @@ themeDarkBtn.onclick = () => {
   themeLightBtn.classList.remove("selected-theme-btn");
   document.getElementsByTagName("nav")[0].classList.add("dark-theme");
   document.getElementById("creditos").classList.add("dark-theme");
+  sideBar.classList.add("dark-theme");
   Array.prototype.forEach.call(figuresUp, function (figure) {
     // Cambiar el color de fondo de cada elemento a verde
     figure.classList.add("dark-theme");
