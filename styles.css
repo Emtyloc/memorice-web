@@ -275,7 +275,7 @@ td {
 }
 
 .config-1 {
-  background-color: blueviolet;
+  background-color: #cf54ff;
   margin: auto;
   margin-top: 0;
   margin-bottom: 5px;
@@ -284,7 +284,7 @@ td {
 }
 
 .config-2 {
-  background-color: bisque;
+  background-color: #f87599;
   margin: auto;
   margin-top: 0;
   margin-bottom: 5px;
@@ -293,7 +293,7 @@ td {
 }
 
 .config-3 {
-  background-color: coral;
+  background-color: #feb845;
   margin: auto;
   margin-top: 0;
   font-family: "Courier New", Courier, monospace;
