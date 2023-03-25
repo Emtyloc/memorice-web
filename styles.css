@@ -413,7 +413,8 @@ td {
 
 .card .figure-down.dark-theme {
   background-color: #2b2c6d;
-  border: 2px solid #bc13fe;
+  border: 2px solid #cf54ff;
+  color: #cf54ff;
 }
 
 /* tarjetas volteadas para entrega */
