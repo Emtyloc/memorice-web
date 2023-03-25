@@ -106,6 +106,7 @@ themeLightBtn.onclick = () => {
   document.getElementsByTagName("nav")[0].classList.remove("dark-theme");
   document.getElementById("creditos").classList.remove("dark-theme");
   sideBar.classList.remove("dark-theme");
+  document.getElementsByTagName("body")[0].classList.remove("dark-theme");
   Array.prototype.forEach.call(figuresUp, function (figure) {
     figure.classList.remove("dark-theme");
   });
@@ -120,6 +121,7 @@ themeDarkBtn.onclick = () => {
   document.getElementsByTagName("nav")[0].classList.add("dark-theme");
   document.getElementById("creditos").classList.add("dark-theme");
   sideBar.classList.add("dark-theme");
+  document.getElementsByTagName("body")[0].classList.add("dark-theme");
   Array.prototype.forEach.call(figuresUp, function (figure) {
     figure.classList.add("dark-theme");
   });
