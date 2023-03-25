@@ -409,7 +409,7 @@ td {
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
   }
   .cards-table-x8 .card {
@@ -426,6 +426,7 @@ td {
   .cards-table-x18 {
     width: calc(100% - 150px);
     min-width: 400px;
+    display: flex;
   }
 
   .cards-table-x32 {
@@ -512,7 +513,7 @@ td {
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
   }
   .cards-table-x8 .card {
@@ -531,7 +532,7 @@ td {
     width: calc(100% - 10px);
     height: calc(100% - 85px);
     margin: auto;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
   }
 
