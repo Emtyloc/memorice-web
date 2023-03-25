@@ -554,6 +554,7 @@ td {
   .cards-table-x18 {
     width: calc(100% - 10px);
     height: calc(100% - 85px);
+    max-height: none;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
