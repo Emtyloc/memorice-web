@@ -14,6 +14,7 @@ const cardsTableX32 = document.getElementsByClassName("cards-table-x32")[0];
 const figuresUp = document.getElementsByClassName("figure-up");
 const figuresDown = document.getElementsByClassName("figure-down");
 const exitNavDiv = document.getElementById("exit-nav-div");
+const cards = document.querySelectorAll(".card");
 
 triesBtn.onclick = () => {
   document.getElementById("score-tables-tries").classList.add("showing-table");
@@ -130,3 +131,9 @@ themeDarkBtn.onclick = () => {
     figure.classList.add("dark-theme");
   });
 };
+
+function flipCard() {
+  this.classList.toggle("flip");
+}
+
+cards.forEach((card) => card.addEventListener("click", flipCard));
