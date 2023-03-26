@@ -486,7 +486,6 @@ td {
     position: relative;
     box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
     border-radius: 15px;
-    background-color: antiquewhite;
     cursor: pointer;
   }
 
@@ -512,7 +511,6 @@ td {
     margin: 5px;
     position: relative;
     box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
-    background-color: antiquewhite;
   }
 
   #hidden-top-nav {
@@ -594,7 +592,6 @@ td {
     position: relative;
     box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
     border-radius: 15px;
-    background-color: antiquewhite;
     cursor: pointer;
     user-select: none;
   }
@@ -614,7 +611,6 @@ td {
     margin: 5px;
     position: relative;
     box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
-    background-color: antiquewhite;
   }
 
   .cards-table-x32 {
@@ -631,6 +627,5 @@ td {
     margin: 5px;
     position: relative;
     box-shadow: 0px 5px 7px 0px rgba(0, 6, 56, 0.7);
-    background-color: antiquewhite;
   }
 }
