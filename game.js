@@ -49,7 +49,7 @@ function unflipCards() {
     secondCard.classList.remove("flip");
 
     resetTable();
-  }, 1200);
+  }, 1000);
 }
 
 //set default values for flippedCard and lockTable,
