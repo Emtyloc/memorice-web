@@ -79,6 +79,11 @@ modeX8btn.onclick = () => {
   cardsTableX8.classList.remove("hidding-cards-table");
   cardsTableX18.classList.add("hidding-cards-table");
   cardsTableX32.classList.add("hidding-cards-table");
+  //shuffle cards
+  cards.forEach((card) => {
+    let ramdomPos = Math.floor(Math.random() * 16);
+    card.style.order = ramdomPos;
+  });
 };
 
 modeX18btn.onclick = () => {
@@ -89,6 +94,11 @@ modeX18btn.onclick = () => {
   cardsTableX18.classList.remove("hidding-cards-table");
   cardsTableX8.classList.add("hidding-cards-table");
   cardsTableX32.classList.add("hidding-cards-table");
+  //shuffle cards
+  cards.forEach((card) => {
+    let ramdomPos = Math.floor(Math.random() * 36);
+    card.style.order = ramdomPos;
+  });
 };
 
 modeX32btn.onclick = () => {
@@ -99,6 +109,11 @@ modeX32btn.onclick = () => {
   cardsTableX32.classList.remove("hidding-cards-table");
   cardsTableX8.classList.add("hidding-cards-table");
   cardsTableX18.classList.add("hidding-cards-table");
+  //shuffle cards
+  cards.forEach((card) => {
+    let ramdomPos = Math.floor(Math.random() * 64);
+    card.style.order = ramdomPos;
+  });
 };
 
 themeLightBtn.onclick = () => {
