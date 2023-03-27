@@ -2,6 +2,7 @@ const cards = document.querySelectorAll(".card");
 const cardsX8 = document.querySelectorAll(".cards-table-x8 .card");
 const cardsX18 = document.querySelectorAll(".cards-table-x18 .card");
 const cardsX32 = document.querySelectorAll(".cards-table-x32 .card");
+const turnCounters = document.querySelectorAll(".turn-counter");
 
 let flippedCard = false;
 let lockTable = false;
@@ -29,6 +30,12 @@ function flipCard() {
 //check if the cards are pairs, if they are then disabled them,
 // else flip them back.
 function checkForMatch() {
+  //count turns
+  turnCounters.forEach((counter) => {
+    let n = parseInt(counter.innerText) + 1;
+    counter.innerText = n.toString();
+  });
+
   let isMatch = firstCard.dataset.icon === secondCard.dataset.icon;
   isMatch ? disableCards() : unflipCards();
 }

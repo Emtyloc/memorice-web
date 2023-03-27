@@ -87,6 +87,7 @@ modeX8btn.onclick = () => {
     card.querySelector(".figure-down").innerText = card.style.order;
     i++;
   });
+  turnCounters.forEach((counter) => (counter.innerText = "0"));
 };
 
 modeX18btn.onclick = () => {
@@ -105,6 +106,7 @@ modeX18btn.onclick = () => {
     card.querySelector(".figure-down").innerText = card.style.order;
     i++;
   });
+  turnCounters.forEach((counter) => (counter.innerText = "0"));
 };
 
 modeX32btn.onclick = () => {
@@ -123,6 +125,7 @@ modeX32btn.onclick = () => {
     card.querySelector(".figure-down").innerText = card.style.order;
     i++;
   });
+  turnCounters.forEach((counter) => (counter.innerText = "0"));
 };
 
 themeLightBtn.onclick = () => {
