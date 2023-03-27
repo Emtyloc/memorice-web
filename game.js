@@ -44,11 +44,10 @@ function disableCards() {
 //flip cards back after 1.2 seconds.
 function unflipCards() {
   lockTable = true;
-  navigator.vibrate([150, 150]);
+  setTimeout(() => navigator.vibrate([50, 30, 50]), 400);
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
-
     resetTable();
   }, 1000);
 }
