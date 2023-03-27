@@ -1,10 +1,12 @@
 const cards = document.querySelectorAll(".card");
 
 let flippedCard = false;
+let lockTable = false;
 let firstCard, secondCard;
 
 //function to flip card and detect if is first or second card
 function flipCard() {
+  if (lockTable) return;
   this.classList.add("flip");
 
   //if flippedCard == false then is the first card
@@ -35,9 +37,11 @@ function disableCards() {
 
 //flip cards back after 1.2 seconds.
 function unflipCards() {
+  lockTable = true;
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
+    lockTable = false;
   }, 1200);
 }
 
