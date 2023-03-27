@@ -58,3 +58,5 @@ function resetTable() {
 
 //adding click event listener for all cards, and calls flipCard().
 cards.forEach((card) => card.addEventListener("click", flipCard));
+
+//https://marina-ferreira.github.io/tutorials/js/memory-game/
