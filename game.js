@@ -56,6 +56,13 @@ function resetTable() {
   [firstCard, secondCard] = [null, null];
 }
 
+(function shuffle() {
+  cards.forEach((card) => {
+    let ramdomPos = Math.floor(Math.random() * 16);
+    card.style.order = ramdomPos;
+  });
+})();
+
 //adding click event listener for all cards, and calls flipCard().
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
