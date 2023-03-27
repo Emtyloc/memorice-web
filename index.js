@@ -79,15 +79,24 @@ modeX8btn.onclick = () => {
   cardsTableX8.classList.remove("hidding-cards-table");
   cardsTableX18.classList.add("hidding-cards-table");
   cardsTableX32.classList.add("hidding-cards-table");
-  //shuffle cards
-  arr = shuffleArray(16);
-  let i = 0;
+
   cardsX8.forEach((card) => {
-    card.style.order = arr[i];
-    card.querySelector(".figure-down").innerText = card.style.order;
-    i++;
+    card.classList.remove("flip");
+    card.addEventListener("click", flipCard);
   });
-  turnCounters.forEach((counter) => (counter.innerText = "0"));
+  lockTable = true;
+  //shuffle cards
+  setTimeout(() => {
+    arr = shuffleArray(16);
+    let i = 0;
+    cardsX8.forEach((card) => {
+      card.style.order = arr[i];
+      card.querySelector(".figure-down").innerText = card.style.order;
+      i++;
+    });
+    turnCounters.forEach((counter) => (counter.innerText = "0"));
+    lockTable = false;
+  }, 1000);
 };
 
 modeX18btn.onclick = () => {
@@ -98,15 +107,24 @@ modeX18btn.onclick = () => {
   cardsTableX18.classList.remove("hidding-cards-table");
   cardsTableX8.classList.add("hidding-cards-table");
   cardsTableX32.classList.add("hidding-cards-table");
-  //shuffle cards
-  arr = shuffleArray(36);
-  let i = 0;
+
   cardsX18.forEach((card) => {
-    card.style.order = arr[i];
-    card.querySelector(".figure-down").innerText = card.style.order;
-    i++;
+    card.classList.remove("flip");
+    card.addEventListener("click", flipCard);
   });
-  turnCounters.forEach((counter) => (counter.innerText = "0"));
+  lockTable = true;
+  //shuffle cards
+  setTimeout(() => {
+    arr = shuffleArray(36);
+    let i = 0;
+    cardsX18.forEach((card) => {
+      card.style.order = arr[i];
+      card.querySelector(".figure-down").innerText = card.style.order;
+      i++;
+    });
+    turnCounters.forEach((counter) => (counter.innerText = "0"));
+    lockTable = false;
+  }, 1000);
 };
 
 modeX32btn.onclick = () => {
@@ -117,15 +135,24 @@ modeX32btn.onclick = () => {
   cardsTableX32.classList.remove("hidding-cards-table");
   cardsTableX8.classList.add("hidding-cards-table");
   cardsTableX18.classList.add("hidding-cards-table");
-  //shuffle cards
-  arr = shuffleArray(64);
-  let i = 0;
+
   cardsX32.forEach((card) => {
-    card.style.order = arr[i];
-    card.querySelector(".figure-down").innerText = card.style.order;
-    i++;
+    card.classList.remove("flip");
+    card.addEventListener("click", flipCard);
   });
-  turnCounters.forEach((counter) => (counter.innerText = "0"));
+  lockTable = true;
+  //shuffle cards
+  setTimeout(() => {
+    arr = shuffleArray(64);
+    let i = 0;
+    cardsX32.forEach((card) => {
+      card.style.order = arr[i];
+      card.querySelector(".figure-down").innerText = card.style.order;
+      i++;
+    });
+    turnCounters.forEach((counter) => (counter.innerText = "0"));
+    lockTable = false;
+  }, 1000);
 };
 
 themeLightBtn.onclick = () => {
