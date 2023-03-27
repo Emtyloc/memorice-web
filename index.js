@@ -80,9 +80,12 @@ modeX8btn.onclick = () => {
   cardsTableX18.classList.add("hidding-cards-table");
   cardsTableX32.classList.add("hidding-cards-table");
   //shuffle cards
-  cards.forEach((card) => {
-    let ramdomPos = Math.floor(Math.random() * 16);
-    card.style.order = ramdomPos;
+  arr = shuffleArray(16);
+  let i = 0;
+  cardsX8.forEach((card) => {
+    card.style.order = arr[i];
+    card.querySelector(".figure-down").innerText = card.style.order;
+    i++;
   });
 };
 
@@ -95,9 +98,12 @@ modeX18btn.onclick = () => {
   cardsTableX8.classList.add("hidding-cards-table");
   cardsTableX32.classList.add("hidding-cards-table");
   //shuffle cards
-  cards.forEach((card) => {
-    let ramdomPos = Math.floor(Math.random() * 36);
-    card.style.order = ramdomPos;
+  arr = shuffleArray(36);
+  let i = 0;
+  cardsX18.forEach((card) => {
+    card.style.order = arr[i];
+    card.querySelector(".figure-down").innerText = card.style.order;
+    i++;
   });
 };
 
@@ -110,9 +116,12 @@ modeX32btn.onclick = () => {
   cardsTableX8.classList.add("hidding-cards-table");
   cardsTableX18.classList.add("hidding-cards-table");
   //shuffle cards
-  cards.forEach((card) => {
-    let ramdomPos = Math.floor(Math.random() * 64);
-    card.style.order = ramdomPos;
+  arr = shuffleArray(64);
+  let i = 0;
+  cardsX32.forEach((card) => {
+    card.style.order = arr[i];
+    card.querySelector(".figure-down").innerText = card.style.order;
+    i++;
   });
 };
 

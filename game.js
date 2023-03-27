@@ -1,4 +1,7 @@
 const cards = document.querySelectorAll(".card");
+const cardsX8 = document.querySelectorAll(".cards-table-x8 .card");
+const cardsX18 = document.querySelectorAll(".cards-table-x18 .card");
+const cardsX32 = document.querySelectorAll(".cards-table-x32 .card");
 
 let flippedCard = false;
 let lockTable = false;
@@ -56,10 +59,19 @@ function resetTable() {
   [firstCard, secondCard] = [null, null];
 }
 
+function shuffleArray(lenght) {
+  return Array.from(Array(lenght).keys())
+    .map((n) => n + 1)
+    .sort(() => Math.random() - 0.5);
+}
+
 (function shuffle() {
-  cards.forEach((card) => {
-    let ramdomPos = Math.floor(Math.random() * 16);
-    card.style.order = ramdomPos;
+  arr = shuffleArray(16);
+  let i = 0;
+  cardsX8.forEach((card) => {
+    card.style.order = arr[i];
+    card.querySelector(".figure-down").innerText = card.style.order;
+    i++;
   });
 })();
 
