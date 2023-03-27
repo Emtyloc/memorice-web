@@ -85,7 +85,10 @@ modeX8btn.onclick = () => {
     card.addEventListener("click", flipCard);
   });
   lockTable = true;
+  newGame = false;
   turnCounters.forEach((counter) => (counter.innerText = "..."));
+  timers.forEach((timer) => (timer.innerText = "0"));
+  clearInterval(runningTimer);
   //shuffle cards
   setTimeout(() => {
     arr = shuffleArray(16);
@@ -114,7 +117,10 @@ modeX18btn.onclick = () => {
     card.addEventListener("click", flipCard);
   });
   lockTable = true;
+  newGame = false;
   turnCounters.forEach((counter) => (counter.innerText = "..."));
+  timers.forEach((timer) => (timer.innerText = "0"));
+  clearInterval(runningTimer);
   //shuffle cards
   setTimeout(() => {
     arr = shuffleArray(36);
@@ -143,7 +149,10 @@ modeX32btn.onclick = () => {
     card.addEventListener("click", flipCard);
   });
   lockTable = true;
+  newGame = false;
   turnCounters.forEach((counter) => (counter.innerText = "..."));
+  timers.forEach((timer) => (timer.innerText = "0"));
+  clearInterval(runningTimer);
   //shuffle cards
   setTimeout(() => {
     arr = shuffleArray(64);

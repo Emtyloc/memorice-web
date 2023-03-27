@@ -3,15 +3,18 @@ const cardsX8 = document.querySelectorAll(".cards-table-x8 .card");
 const cardsX18 = document.querySelectorAll(".cards-table-x18 .card");
 const cardsX32 = document.querySelectorAll(".cards-table-x32 .card");
 const turnCounters = document.querySelectorAll(".turn-counter");
+const timers = document.querySelectorAll(".time-counter");
 
 let flippedCard = false;
 let lockTable = false;
-let firstCard, secondCard;
+let newGame = false;
+let firstCard, secondCard, seconds, runningTimer;
 
 //function to flip card and detect if is first or second card
 function flipCard() {
   if (lockTable) return;
   if (this === firstCard) return;
+  if (!newGame) startTimer();
 
   this.classList.add("flip");
 
@@ -81,6 +84,19 @@ function shuffleArray(lenght) {
     i++;
   });
 })();
+
+function startTimer() {
+  newGame = true;
+  seconds = 0;
+
+  function incrementSeconds() {
+    timers.forEach((timer) => (timer.innerText = seconds.toString()));
+    seconds++;
+  }
+
+  runningTimer = setInterval(incrementSeconds, 1000);
+  incrementSeconds();
+}
 
 //adding click event listener for all cards, and calls flipCard().
 cards.forEach((card) => card.addEventListener("click", flipCard));
