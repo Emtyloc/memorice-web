@@ -8,6 +8,9 @@ const timers = document.querySelectorAll(".time-counter");
 let flippedCard = false;
 let lockTable = false;
 let newGame = false;
+let gameModes = { x8: 8, x18: 18, x32: 32 };
+let gameMode = gameModes.x8;
+let pairsCounter = 0;
 let firstCard, secondCard, seconds, runningTimer;
 
 //function to flip card and detect if is first or second card
@@ -47,6 +50,8 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
+  pairsCounter++;
+  if (pairsCounter === gameMode) youWin();
 
   resetTable();
 }
@@ -96,6 +101,14 @@ function startTimer() {
 
   runningTimer = setInterval(incrementSeconds, 1000);
   incrementSeconds();
+}
+
+function youWin() {
+  setTimeout(
+    () => alert("you win the " + gameMode.toString() + "x game!\nTurnos:"),
+    500
+  );
+  clearInterval(runningTimer);
 }
 
 //adding click event listener for all cards, and calls flipCard().

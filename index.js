@@ -86,6 +86,8 @@ modeX8btn.onclick = () => {
   });
   lockTable = true;
   newGame = false;
+  gameMode = gameModes.x8;
+  pairsCounter = 0;
   turnCounters.forEach((counter) => (counter.innerText = "..."));
   timers.forEach((timer) => (timer.innerText = "0"));
   clearInterval(runningTimer);
@@ -118,6 +120,8 @@ modeX18btn.onclick = () => {
   });
   lockTable = true;
   newGame = false;
+  gameMode = gameModes.x18;
+  pairsCounter = 0;
   turnCounters.forEach((counter) => (counter.innerText = "..."));
   timers.forEach((timer) => (timer.innerText = "0"));
   clearInterval(runningTimer);
@@ -150,7 +154,9 @@ modeX32btn.onclick = () => {
   });
   lockTable = true;
   newGame = false;
-  turnCounters.forEach((counter) => (counter.innerText = "..."));
+  gameMode = gameModes.x32;
+  pairsCounter = 0;
+  turnCounters.forEach((counter) => (counter.innerText = "🔀"));
   timers.forEach((timer) => (timer.innerText = "0"));
   clearInterval(runningTimer);
   //shuffle cards
