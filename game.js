@@ -115,11 +115,15 @@ function youWin() {
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
 //instructions of the game
-alert(
-  "Instrucciones de Memo Vice 🎴:\n  \
+setTimeout(
+  () =>
+    alert(
+      "Instrucciones de Memo Vice 🎴:\n  \
   1. Para comenzar o reiniciar una partida, apreta uno de los modos de juego que se encuentran en configuracion ⚙️.\n  \
   2. El juego termina cuando encuentras todos los pares.\n  \
   3. Diviertete! 😎"
+    ),
+  200
 );
 
 //https://marina-ferreira.github.io/tutorials/js/memory-game/

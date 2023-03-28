@@ -15,6 +15,10 @@ const figuresUp = document.getElementsByClassName("figure-up");
 const figuresDown = document.getElementsByClassName("figure-down");
 const exitNavDiv = document.getElementById("exit-nav-div");
 
+localStorage.getItem("theme") === "dark-theme"
+  ? setDarkTheme()
+  : setLightTheme();
+
 triesBtn.onclick = () => {
   document.getElementById("score-tables-tries").classList.add("showing-table");
   document
@@ -173,7 +177,8 @@ modeX32btn.onclick = () => {
   }, 1000);
 };
 
-themeLightBtn.onclick = () => {
+function setLightTheme() {
+  localStorage.setItem("theme", "light-theme");
   themeLightBtn.classList.add("selected-theme-btn");
   themeDarkBtn.classList.remove("selected-theme-btn");
   document.getElementsByTagName("nav")[0].classList.remove("dark-theme");
@@ -186,9 +191,10 @@ themeLightBtn.onclick = () => {
   Array.prototype.forEach.call(figuresDown, function (figure) {
     figure.classList.remove("dark-theme");
   });
-};
+}
 
-themeDarkBtn.onclick = () => {
+function setDarkTheme() {
+  localStorage.setItem("theme", "dark-theme");
   themeDarkBtn.classList.add("selected-theme-btn");
   themeLightBtn.classList.remove("selected-theme-btn");
   document.getElementsByTagName("nav")[0].classList.add("dark-theme");
@@ -201,4 +207,12 @@ themeDarkBtn.onclick = () => {
   Array.prototype.forEach.call(figuresDown, function (figure) {
     figure.classList.add("dark-theme");
   });
+}
+
+themeLightBtn.onclick = () => {
+  setLightTheme();
+};
+
+themeDarkBtn.onclick = () => {
+  setDarkTheme();
 };
