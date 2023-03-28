@@ -421,6 +421,10 @@ td {
   transform: rotateY(180deg);
 }
 
+.cards-table-x8 .card .figure-up {
+  font-size: 45px;
+}
+
 .card .figure-up.dark-theme {
   background-color: #6668b4;
 }
