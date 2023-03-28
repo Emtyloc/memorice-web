@@ -111,6 +111,7 @@ function startTimer() {
 
 function youWin() {
   saveScores();
+  sortTables();
   setTimeout(
     () => alert("you win the x" + gameMode.toString() + " game!"),
     500
@@ -123,7 +124,7 @@ function saveScores() {
   switch (gameMode) {
     case 32:
       today = new Date();
-      row = tryTableX32.insertRow();
+      row = tryTableX32.querySelector("tbody").insertRow();
       cell1 = row.insertCell(0);
       cell2 = row.insertCell(1);
       cell3 = row.insertCell(2);
@@ -136,7 +137,7 @@ function saveScores() {
         "/" +
         today.getFullYear();
       today = new Date();
-      row = timeTableX32.insertRow();
+      row = timeTableX32.querySelector("tbody").insertRow();
       cell1 = row.insertCell(0);
       cell2 = row.insertCell(1);
       cell3 = row.insertCell(2);
@@ -151,7 +152,7 @@ function saveScores() {
       break;
     case 18:
       today = new Date();
-      row = tryTableX18.insertRow();
+      row = tryTableX18.querySelector("tbody").insertRow();
       cell1 = row.insertCell(0);
       cell2 = row.insertCell(1);
       cell3 = row.insertCell(2);
@@ -164,7 +165,7 @@ function saveScores() {
         "/" +
         today.getFullYear();
       today = new Date();
-      row = timeTableX18.insertRow();
+      row = timeTableX18.querySelector("tbody").insertRow();
       cell1 = row.insertCell(0);
       cell2 = row.insertCell(1);
       cell3 = row.insertCell(2);
@@ -179,7 +180,7 @@ function saveScores() {
       break;
     case 8:
       today = new Date();
-      row = tryTableX8.insertRow();
+      row = tryTableX8.querySelector("tbody").insertRow();
       cell1 = row.insertCell(0);
       cell2 = row.insertCell(1);
       cell3 = row.insertCell(2);
@@ -192,7 +193,7 @@ function saveScores() {
         "/" +
         today.getFullYear();
       today = new Date();
-      row = timeTableX8.insertRow();
+      row = timeTableX8.querySelector("tbody").insertRow();
       cell1 = row.insertCell(0);
       cell2 = row.insertCell(1);
       cell3 = row.insertCell(2);
@@ -209,6 +210,69 @@ function saveScores() {
       console.log("NO ENTRO A NINGUN CASO PARA GUARDAR SCORES!");
       break;
   }
+}
+
+function sortTables() {
+  let timeRowsX32 = Array.from(timeTableX32.querySelectorAll("tbody tr"));
+  let timeRowsX18 = Array.from(timeTableX18.querySelectorAll("tbody tr"));
+  let timeRowsX8 = Array.from(timeTableX8.querySelectorAll("tbody tr"));
+  let tryRowsX32 = Array.from(tryTableX32.querySelectorAll("tbody tr"));
+  let tryRowsX18 = Array.from(tryTableX18.querySelectorAll("tbody tr"));
+  let tryRowsX8 = Array.from(tryTableX8.querySelectorAll("tbody tr"));
+
+  timeRowsX32.sort(function (a, b) {
+    let aVal = parseInt(a.cells[1].textContent);
+    let bVal = parseInt(b.cells[1].textContent);
+    return aVal - bVal;
+  });
+  timeRowsX32.forEach(function (row) {
+    timeTableX32.querySelector("tbody").appendChild(row);
+  });
+
+  timeRowsX18.sort(function (a, b) {
+    let aVal = parseInt(a.cells[1].textContent);
+    let bVal = parseInt(b.cells[1].textContent);
+    return aVal - bVal;
+  });
+  timeRowsX18.forEach(function (row) {
+    timeTableX18.querySelector("tbody").appendChild(row);
+  });
+
+  timeRowsX8.sort(function (a, b) {
+    let aVal = parseInt(a.cells[1].textContent);
+    let bVal = parseInt(b.cells[1].textContent);
+    return aVal - bVal;
+  });
+  timeRowsX8.forEach(function (row) {
+    timeTableX8.querySelector("tbody").appendChild(row);
+  });
+
+  tryRowsX32.sort(function (a, b) {
+    let aVal = parseInt(a.cells[1].textContent);
+    let bVal = parseInt(b.cells[1].textContent);
+    return aVal - bVal;
+  });
+  tryRowsX32.forEach(function (row) {
+    tryTableX32.querySelector("tbody").appendChild(row);
+  });
+
+  tryRowsX18.sort(function (a, b) {
+    let aVal = parseInt(a.cells[1].textContent);
+    let bVal = parseInt(b.cells[1].textContent);
+    return aVal - bVal;
+  });
+  tryRowsX18.forEach(function (row) {
+    tryTableX18.querySelector("tbody").appendChild(row);
+  });
+
+  tryRowsX8.sort(function (a, b) {
+    let aVal = parseInt(a.cells[1].textContent);
+    let bVal = parseInt(b.cells[1].textContent);
+    return aVal - bVal;
+  });
+  tryRowsX8.forEach(function (row) {
+    tryTableX8.querySelector("tbody").appendChild(row);
+  });
 }
 
 //adding click event listener for all cards, and calls flipCard().

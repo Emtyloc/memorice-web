@@ -261,8 +261,6 @@ table {
 }
 table > thead > tr:nth-child(2) > th,
 table > thead > tr:nth-child(2) > td,
-table > tbody > tr:nth-child(2) > th,
-table > tbody > tr:nth-child(2) > td,
 table > tfoot > tr:nth-child(2) > th,
 table > tfoot > tr:nth-child(2) > td,
 table > tr:nth-child(2) > td,
