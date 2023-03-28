@@ -4,6 +4,12 @@ const cardsX18 = document.querySelectorAll(".cards-table-x18 .card");
 const cardsX32 = document.querySelectorAll(".cards-table-x32 .card");
 const turnCounters = document.querySelectorAll(".turn-counter");
 const timers = document.querySelectorAll(".time-counter");
+const tryTableX32 = document.getElementById("try-table-x32");
+const tryTableX18 = document.getElementById("try-table-x18");
+const tryTableX8 = document.getElementById("try-table-x8");
+const timeTableX32 = document.getElementById("time-table-x32");
+const timeTableX18 = document.getElementById("time-table-x18");
+const timeTableX8 = document.getElementById("time-table-x8");
 
 let flippedCard = false;
 let lockTable = false;
@@ -104,11 +110,105 @@ function startTimer() {
 }
 
 function youWin() {
+  saveScores();
   setTimeout(
     () => alert("you win the x" + gameMode.toString() + " game!"),
     500
   );
   clearInterval(runningTimer);
+}
+
+function saveScores() {
+  let today, row, cell1, cell2, cell3;
+  switch (gameMode) {
+    case 32:
+      today = new Date();
+      row = tryTableX32.insertRow();
+      cell1 = row.insertCell(0);
+      cell2 = row.insertCell(1);
+      cell3 = row.insertCell(2);
+      cell1.innerHTML = "Tu";
+      cell2.innerHTML = turnCounters[0].innerText;
+      cell3.innerHTML =
+        String(today.getDate()).padStart(2, "0") +
+        "/" +
+        String(today.getMonth() + 1).padStart(2, "0") +
+        "/" +
+        today.getFullYear();
+      today = new Date();
+      row = timeTableX32.insertRow();
+      cell1 = row.insertCell(0);
+      cell2 = row.insertCell(1);
+      cell3 = row.insertCell(2);
+      cell1.innerHTML = "Tu";
+      cell2.innerHTML = String(seconds - 1);
+      cell3.innerHTML =
+        String(today.getDate()).padStart(2, "0") +
+        "/" +
+        String(today.getMonth() + 1).padStart(2, "0") +
+        "/" +
+        today.getFullYear();
+      break;
+    case 18:
+      today = new Date();
+      row = tryTableX18.insertRow();
+      cell1 = row.insertCell(0);
+      cell2 = row.insertCell(1);
+      cell3 = row.insertCell(2);
+      cell1.innerHTML = "Tu";
+      cell2.innerHTML = turnCounters[0].innerText;
+      cell3.innerHTML =
+        String(today.getDate()).padStart(2, "0") +
+        "/" +
+        String(today.getMonth() + 1).padStart(2, "0") +
+        "/" +
+        today.getFullYear();
+      today = new Date();
+      row = timeTableX18.insertRow();
+      cell1 = row.insertCell(0);
+      cell2 = row.insertCell(1);
+      cell3 = row.insertCell(2);
+      cell1.innerHTML = "Tu";
+      cell2.innerHTML = String(seconds - 1);
+      cell3.innerHTML =
+        String(today.getDate()).padStart(2, "0") +
+        "/" +
+        String(today.getMonth() + 1).padStart(2, "0") +
+        "/" +
+        today.getFullYear();
+      break;
+    case 8:
+      today = new Date();
+      row = tryTableX8.insertRow();
+      cell1 = row.insertCell(0);
+      cell2 = row.insertCell(1);
+      cell3 = row.insertCell(2);
+      cell1.innerHTML = "Tu";
+      cell2.innerHTML = turnCounters[0].innerText;
+      cell3.innerHTML =
+        String(today.getDate()).padStart(2, "0") +
+        "/" +
+        String(today.getMonth() + 1).padStart(2, "0") +
+        "/" +
+        today.getFullYear();
+      today = new Date();
+      row = timeTableX8.insertRow();
+      cell1 = row.insertCell(0);
+      cell2 = row.insertCell(1);
+      cell3 = row.insertCell(2);
+      cell1.innerHTML = "Tu";
+      cell2.innerHTML = String(seconds - 1);
+      cell3.innerHTML =
+        String(today.getDate()).padStart(2, "0") +
+        "/" +
+        String(today.getMonth() + 1).padStart(2, "0") +
+        "/" +
+        today.getFullYear();
+      break;
+    default:
+      console.log("NO ENTRO A NINGUN CASO PARA GUARDAR SCORES!");
+      break;
+  }
 }
 
 //adding click event listener for all cards, and calls flipCard().
