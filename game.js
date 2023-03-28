@@ -105,7 +105,7 @@ function startTimer() {
 
 function youWin() {
   setTimeout(
-    () => alert("you win the " + gameMode.toString() + "x game!\nTurnos:"),
+    () => alert("you win the x" + gameMode.toString() + " game!"),
     500
   );
   clearInterval(runningTimer);
