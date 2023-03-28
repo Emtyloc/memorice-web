@@ -156,7 +156,7 @@ modeX32btn.onclick = () => {
   newGame = false;
   gameMode = gameModes.x32;
   pairsCounter = 0;
-  turnCounters.forEach((counter) => (counter.innerText = "🔀"));
+  turnCounters.forEach((counter) => (counter.innerText = "..."));
   timers.forEach((timer) => (timer.innerText = "0"));
   clearInterval(runningTimer);
   //shuffle cards
