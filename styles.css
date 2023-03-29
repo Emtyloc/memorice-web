@@ -453,20 +453,6 @@ td {
   color: #cf54ff;
 }
 
-/* tarjetas volteadas para entrega
-.card:nth-of-type(5) .figure-up {
-  display: flex;
-}
-.card:nth-of-type(5) .figure-down {
-  display: none;
-}
-.card:nth-of-type(11) .figure-up {
-  display: flex;
-}
-.card:nth-of-type(11) .figure-down {
-  display: none;
-} */
-
 @media screen and (max-height: 400px) and (orientation: landscape) {
   body {
     margin-left: 90px;

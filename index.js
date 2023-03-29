@@ -88,6 +88,7 @@ modeX8btn.onclick = () => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+  resetTable();
   lockTable = true;
   newGame = false;
   gameMode = gameModes.x8;
@@ -122,6 +123,7 @@ modeX18btn.onclick = () => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+  resetTable();
   lockTable = true;
   newGame = false;
   gameMode = gameModes.x18;
@@ -156,6 +158,7 @@ modeX32btn.onclick = () => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+  resetTable();
   lockTable = true;
   newGame = false;
   gameMode = gameModes.x32;
