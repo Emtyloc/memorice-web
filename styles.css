@@ -73,16 +73,18 @@ nav.dark-theme {
   color: #fff653;
   text-shadow: 0 0 7px #fbf116;
   font-family: monospace;
+  font-weight: bold;
 }
 
 .replay-game-div.hidden {
   display: none;
 }
 
-.cards-table-x32 .card.try-again,
-.cards-table-x18 .card.try-again,
-.cards-table-x8 .card.try-again {
-  filter: blur(2px);
+.figure-up.try-again,
+.figure-up.try-again,
+.figure-up.try-again {
+  opacity: 0.7;
+  filter: blur(1px);
 }
 
 #hidden-top-nav {

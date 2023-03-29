@@ -112,10 +112,16 @@ function startTimer() {
 
 function showReplayGame() {
   tryAgainMsg.forEach((msg) => msg.classList.remove("hidden"));
+  cards.forEach((card) =>
+    card.querySelector(".figure-up").classList.add("try-again")
+  );
 }
 
 function hideReplayGame() {
   tryAgainMsg.forEach((msg) => msg.classList.add("hidden"));
+  cards.forEach((card) =>
+    card.querySelector(".figure-up").classList.remove("try-again")
+  );
 }
 
 function youWin() {
