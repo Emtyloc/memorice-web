@@ -478,7 +478,7 @@ td {
   }
 
   .cards-table-x18 {
-    width: calc(100% - 150px);
+    width: calc(100% - 100px);
     min-width: 400px;
     display: flex;
   }
