@@ -296,6 +296,42 @@ function sortTables() {
   });
 }
 
+function saveTableData(id) {
+  let tabla = document.getElementById(id);
+  let datos = [];
+
+  for (let i = 0; i < tabla.querySelector("tbody").rows.length; i++) {
+    let fila = tabla.querySelector("tbody").rows[i];
+    let nombre = fila.cells[0].textContent;
+    let centro = fila.cells[1].textContent;
+    let fecha = fila.cells[2].textContent;
+
+    datos.push({ nombre: nombre, centro: centro, fecha: fecha });
+  }
+  localStorage.setItem(id, JSON.stringify(datos));
+}
+
+function getSavedTable(id) {
+  let tabla = JSON.parse(localStorage.getItem(id));
+
+  for (let i = 0; i < tabla.length; i++) {
+    let fila = document.createElement("tr");
+    let celdaNombre = document.createElement("td");
+    let celdaCentral = document.createElement("td");
+    let celdaFecha = document.createElement("td");
+
+    celdaNombre.textContent = tabla[i].nombre;
+    celdaCentral.textContent = tabla[i].centro;
+    celdaFecha.textContent = tabla[i].fecha;
+
+    fila.appendChild(celdaNombre);
+    fila.appendChild(celdaCentral);
+    fila.appendChild(celdaFecha);
+
+    document.getElementById(id).querySelector("tbody").appendChild(fila);
+  }
+}
+
 //adding click event listener for all cards, and calls flipCard().
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
