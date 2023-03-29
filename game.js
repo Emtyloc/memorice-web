@@ -112,10 +112,7 @@ function startTimer() {
 function youWin() {
   saveScores();
   sortTables();
-  setTimeout(
-    () => alert("you win the x" + gameMode.toString() + " game!"),
-    500
-  );
+  setTimeout(() => alert("Ganaste el modo x" + gameMode.toString() + "!"), 500);
   clearInterval(runningTimer);
 }
 
@@ -225,7 +222,11 @@ function sortTables() {
     let bVal = parseInt(b.cells[1].textContent);
     return aVal - bVal;
   });
-  timeRowsX32.forEach(function (row) {
+  timeRowsX32.forEach(function (row, index) {
+    if (index === 3) {
+      timeTableX32.querySelector("tbody").removeChild(row);
+      return;
+    }
     timeTableX32.querySelector("tbody").appendChild(row);
   });
 
@@ -234,7 +235,11 @@ function sortTables() {
     let bVal = parseInt(b.cells[1].textContent);
     return aVal - bVal;
   });
-  timeRowsX18.forEach(function (row) {
+  timeRowsX18.forEach(function (row, index) {
+    if (index === 3) {
+      timeTableX18.querySelector("tbody").removeChild(row);
+      return;
+    }
     timeTableX18.querySelector("tbody").appendChild(row);
   });
 
@@ -243,7 +248,11 @@ function sortTables() {
     let bVal = parseInt(b.cells[1].textContent);
     return aVal - bVal;
   });
-  timeRowsX8.forEach(function (row) {
+  timeRowsX8.forEach(function (row, index) {
+    if (index === 3) {
+      timeTableX8.querySelector("tbody").removeChild(row);
+      return;
+    }
     timeTableX8.querySelector("tbody").appendChild(row);
   });
 
@@ -252,7 +261,11 @@ function sortTables() {
     let bVal = parseInt(b.cells[1].textContent);
     return aVal - bVal;
   });
-  tryRowsX32.forEach(function (row) {
+  tryRowsX32.forEach(function (row, index) {
+    if (index === 3) {
+      tryTableX32.querySelector("tbody").removeChild(row);
+      return;
+    }
     tryTableX32.querySelector("tbody").appendChild(row);
   });
 
@@ -261,7 +274,11 @@ function sortTables() {
     let bVal = parseInt(b.cells[1].textContent);
     return aVal - bVal;
   });
-  tryRowsX18.forEach(function (row) {
+  tryRowsX18.forEach(function (row, index) {
+    if (index === 3) {
+      tryTableX18.querySelector("tbody").removeChild(row);
+      return;
+    }
     tryTableX18.querySelector("tbody").appendChild(row);
   });
 
@@ -270,7 +287,11 @@ function sortTables() {
     let bVal = parseInt(b.cells[1].textContent);
     return aVal - bVal;
   });
-  tryRowsX8.forEach(function (row) {
+  tryRowsX8.forEach(function (row, index) {
+    if (index === 3) {
+      tryTableX8.querySelector("tbody").removeChild(row);
+      return;
+    }
     tryTableX8.querySelector("tbody").appendChild(row);
   });
 }
