@@ -10,6 +10,7 @@ const tryTableX8 = document.getElementById("try-table-x8");
 const timeTableX32 = document.getElementById("time-table-x32");
 const timeTableX18 = document.getElementById("time-table-x18");
 const timeTableX8 = document.getElementById("time-table-x8");
+const tryAgainMsg = document.querySelectorAll(".replay-game-div");
 
 let flippedCard = false;
 let lockTable = false;
@@ -109,6 +110,14 @@ function startTimer() {
   incrementSeconds();
 }
 
+function showReplayGame() {
+  tryAgainMsg.forEach((msg) => msg.classList.remove("hidden"));
+}
+
+function hideReplayGame() {
+  tryAgainMsg.forEach((msg) => msg.classList.add("hidden"));
+}
+
 function youWin() {
   saveScores();
   sortTables();
@@ -120,6 +129,7 @@ function youWin() {
   saveTableData("time-table-x8");
   setTimeout(() => alert("Ganaste el modo x" + gameMode.toString() + "!"), 500);
   clearInterval(runningTimer);
+  showReplayGame();
 }
 
 function saveScores() {

@@ -79,112 +79,143 @@ sideBar.onclick = () => {
   alert("Gira la pantalla para las configuraciones ⚙️.");
 };
 
-modeX8btn.onclick = () => {
-  modeX8btn.classList.add("selected-mode-btn");
-  modeX18btn.classList.remove("selected-mode-btn");
-  modeX32btn.classList.remove("selected-mode-btn");
+function setGameMode(mode) {
+  switch (mode) {
+    case 8:
+      modeX8btn.classList.add("selected-mode-btn");
+      modeX18btn.classList.remove("selected-mode-btn");
+      modeX32btn.classList.remove("selected-mode-btn");
 
-  cardsTableX8.classList.remove("hidding-cards-table");
-  cardsTableX18.classList.add("hidding-cards-table");
-  cardsTableX32.classList.add("hidding-cards-table");
-  //reset card table
-  cardsX8.forEach((card) => {
-    card.classList.remove("flip");
-    card.addEventListener("click", flipCard);
-  });
+      cardsTableX8.classList.remove("hidding-cards-table");
+      cardsTableX18.classList.add("hidding-cards-table");
+      cardsTableX32.classList.add("hidding-cards-table");
+      //reset card table
+      cardsX8.forEach((card) => {
+        card.classList.remove("flip");
+        card.addEventListener("click", flipCard);
+      });
+      hideReplayGame();
+      resetTable();
+      lockTable = true;
+      newGame = false;
+      gameMode = gameModes.x8;
+      pairsCounter = 0;
+      turnCounters.forEach((counter) => (counter.innerText = "..."));
+      timers.forEach((timer) => (timer.innerText = "0"));
+      clearInterval(runningTimer);
+      //shuffle cards
+      setTimeout(() => {
+        arr = shuffleArray(16);
+        let i = 0;
+        cardsX8.forEach((card) => {
+          card.style.order = arr[i];
+          card.querySelector(".figure-down").innerText = card.style.order;
+          i++;
+        });
+        turnCounters.forEach((counter) => (counter.innerText = "0"));
+        lockTable = false;
+      }, 1000);
+      break;
+    case 18:
+      modeX18btn.classList.add("selected-mode-btn");
+      modeX8btn.classList.remove("selected-mode-btn");
+      modeX32btn.classList.remove("selected-mode-btn");
+
+      cardsTableX18.classList.remove("hidding-cards-table");
+      cardsTableX8.classList.add("hidding-cards-table");
+      cardsTableX32.classList.add("hidding-cards-table");
+      //reset card table
+      cardsX18.forEach((card) => {
+        card.classList.remove("flip");
+        card.addEventListener("click", flipCard);
+      });
+      hideReplayGame();
+      resetTable();
+      lockTable = true;
+      newGame = false;
+      gameMode = gameModes.x18;
+      pairsCounter = 0;
+      turnCounters.forEach((counter) => (counter.innerText = "..."));
+      timers.forEach((timer) => (timer.innerText = "0"));
+      clearInterval(runningTimer);
+      //shuffle cards
+      setTimeout(() => {
+        arr = shuffleArray(36);
+        let i = 0;
+        cardsX18.forEach((card) => {
+          card.style.order = arr[i];
+          card.querySelector(".figure-down").innerText = card.style.order;
+          i++;
+        });
+        turnCounters.forEach((counter) => (counter.innerText = "0"));
+        lockTable = false;
+      }, 1000);
+      break;
+    case 32:
+      modeX32btn.classList.add("selected-mode-btn");
+      modeX8btn.classList.remove("selected-mode-btn");
+      modeX18btn.classList.remove("selected-mode-btn");
+
+      cardsTableX32.classList.remove("hidding-cards-table");
+      cardsTableX8.classList.add("hidding-cards-table");
+      cardsTableX18.classList.add("hidding-cards-table");
+      //reset card table
+      cardsX32.forEach((card) => {
+        card.classList.remove("flip");
+        card.addEventListener("click", flipCard);
+      });
+      hideReplayGame();
+      resetTable();
+      lockTable = true;
+      newGame = false;
+      gameMode = gameModes.x32;
+      pairsCounter = 0;
+      turnCounters.forEach((counter) => (counter.innerText = "..."));
+      timers.forEach((timer) => (timer.innerText = "0"));
+      clearInterval(runningTimer);
+      //shuffle cards
+      setTimeout(() => {
+        arr = shuffleArray(64);
+        let i = 0;
+        cardsX32.forEach((card) => {
+          card.style.order = arr[i];
+          card.querySelector(".figure-down").innerText = card.style.order;
+          i++;
+        });
+        turnCounters.forEach((counter) => (counter.innerText = "0"));
+        lockTable = false;
+      }, 1000);
+      break;
+
+    default:
+      console.log("no valid mode selected");
+      break;
+  }
+}
+
+modeX8btn.onclick = () => {
+  setGameMode(8);
   hideTopNav();
-  resetTable();
-  lockTable = true;
-  newGame = false;
-  gameMode = gameModes.x8;
-  pairsCounter = 0;
-  turnCounters.forEach((counter) => (counter.innerText = "..."));
-  timers.forEach((timer) => (timer.innerText = "0"));
-  clearInterval(runningTimer);
-  //shuffle cards
-  setTimeout(() => {
-    arr = shuffleArray(16);
-    let i = 0;
-    cardsX8.forEach((card) => {
-      card.style.order = arr[i];
-      card.querySelector(".figure-down").innerText = card.style.order;
-      i++;
-    });
-    turnCounters.forEach((counter) => (counter.innerText = "0"));
-    lockTable = false;
-  }, 1000);
 };
 
 modeX18btn.onclick = () => {
-  modeX18btn.classList.add("selected-mode-btn");
-  modeX8btn.classList.remove("selected-mode-btn");
-  modeX32btn.classList.remove("selected-mode-btn");
-
-  cardsTableX18.classList.remove("hidding-cards-table");
-  cardsTableX8.classList.add("hidding-cards-table");
-  cardsTableX32.classList.add("hidding-cards-table");
-  //reset card table
-  cardsX18.forEach((card) => {
-    card.classList.remove("flip");
-    card.addEventListener("click", flipCard);
-  });
+  setGameMode(18);
   hideTopNav();
-  resetTable();
-  lockTable = true;
-  newGame = false;
-  gameMode = gameModes.x18;
-  pairsCounter = 0;
-  turnCounters.forEach((counter) => (counter.innerText = "..."));
-  timers.forEach((timer) => (timer.innerText = "0"));
-  clearInterval(runningTimer);
-  //shuffle cards
-  setTimeout(() => {
-    arr = shuffleArray(36);
-    let i = 0;
-    cardsX18.forEach((card) => {
-      card.style.order = arr[i];
-      card.querySelector(".figure-down").innerText = card.style.order;
-      i++;
-    });
-    turnCounters.forEach((counter) => (counter.innerText = "0"));
-    lockTable = false;
-  }, 1000);
 };
 
 modeX32btn.onclick = () => {
-  modeX32btn.classList.add("selected-mode-btn");
-  modeX8btn.classList.remove("selected-mode-btn");
-  modeX18btn.classList.remove("selected-mode-btn");
-
-  cardsTableX32.classList.remove("hidding-cards-table");
-  cardsTableX8.classList.add("hidding-cards-table");
-  cardsTableX18.classList.add("hidding-cards-table");
-  //reset card table
-  cardsX32.forEach((card) => {
-    card.classList.remove("flip");
-    card.addEventListener("click", flipCard);
-  });
+  setGameMode(32);
   hideTopNav();
-  resetTable();
-  lockTable = true;
-  newGame = false;
-  gameMode = gameModes.x32;
-  pairsCounter = 0;
-  turnCounters.forEach((counter) => (counter.innerText = "..."));
-  timers.forEach((timer) => (timer.innerText = "0"));
-  clearInterval(runningTimer);
-  //shuffle cards
-  setTimeout(() => {
-    arr = shuffleArray(64);
-    let i = 0;
-    cardsX32.forEach((card) => {
-      card.style.order = arr[i];
-      card.querySelector(".figure-down").innerText = card.style.order;
-      i++;
-    });
-    turnCounters.forEach((counter) => (counter.innerText = "0"));
-    lockTable = false;
-  }, 1000);
+};
+
+cardsTableX8.querySelector(".replay-game-div").onclick = () => {
+  setGameMode(8);
+};
+cardsTableX18.querySelector(".replay-game-div").onclick = () => {
+  setGameMode(18);
+};
+cardsTableX32.querySelector(".replay-game-div").onclick = () => {
+  setGameMode(32);
 };
 
 function setLightTheme() {

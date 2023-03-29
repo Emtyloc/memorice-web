@@ -54,6 +54,37 @@ nav.dark-theme {
   display: none;
 }
 
+.replay-game-div {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.replay-game-div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  user-select: none;
+  cursor: pointer;
+  color: #fff653;
+  text-shadow: 0 0 7px #fbf116;
+  font-family: monospace;
+}
+
+.replay-game-div.hidden {
+  display: none;
+}
+
+.cards-table-x32 .card.try-again,
+.cards-table-x18 .card.try-again,
+.cards-table-x8 .card.try-again {
+  filter: blur(2px);
+}
+
 #hidden-top-nav {
   width: 100%;
   background-color: #2b2c6d;
