@@ -49,6 +49,17 @@ timesBtn.onclick = () => {
   timesBtn.classList.add("selected-table-btn");
 };
 
+function hideTopNav() {
+  document.getElementById("config-nav-div").classList.toggle("open-settings");
+  document.getElementById("config-nav-div").classList.toggle("close-settings");
+
+  document.getElementById("config-nav-div").classList.contains("open-settings")
+    ? (settingsBtn.innerText = "cerrar")
+    : (settingsBtn.innerText = "configuracion");
+
+  exitNavDiv.classList.add("hidden");
+}
+
 navBar.onclick = () => {
   document.getElementById("config-nav-div").classList.toggle("open-settings");
   document.getElementById("config-nav-div").classList.toggle("close-settings");
@@ -61,14 +72,7 @@ navBar.onclick = () => {
 };
 
 exitNavDiv.onclick = () => {
-  document.getElementById("config-nav-div").classList.toggle("open-settings");
-  document.getElementById("config-nav-div").classList.toggle("close-settings");
-
-  document.getElementById("config-nav-div").classList.contains("open-settings")
-    ? (settingsBtn.innerText = "cerrar")
-    : (settingsBtn.innerText = "configuracion");
-
-  exitNavDiv.classList.add("hidden");
+  hideTopNav();
 };
 
 sideBar.onclick = () => {
@@ -88,6 +92,7 @@ modeX8btn.onclick = () => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+  hideTopNav();
   resetTable();
   lockTable = true;
   newGame = false;
@@ -123,6 +128,7 @@ modeX18btn.onclick = () => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+  hideTopNav();
   resetTable();
   lockTable = true;
   newGame = false;
@@ -158,6 +164,7 @@ modeX32btn.onclick = () => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+  hideTopNav();
   resetTable();
   lockTable = true;
   newGame = false;
