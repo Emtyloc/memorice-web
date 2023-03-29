@@ -112,6 +112,12 @@ function startTimer() {
 function youWin() {
   saveScores();
   sortTables();
+  saveTableData("try-table-x8");
+  saveTableData("try-table-x18");
+  saveTableData("try-table-x32");
+  saveTableData("time-table-x32");
+  saveTableData("time-table-x18");
+  saveTableData("time-table-x8");
   setTimeout(() => alert("Ganaste el modo x" + gameMode.toString() + "!"), 500);
   clearInterval(runningTimer);
 }
@@ -313,7 +319,7 @@ function saveTableData(id) {
 
 function getSavedTable(id) {
   let tabla = JSON.parse(localStorage.getItem(id));
-
+  if (tabla === null) return;
   for (let i = 0; i < tabla.length; i++) {
     let fila = document.createElement("tr");
     let celdaNombre = document.createElement("td");
@@ -331,6 +337,13 @@ function getSavedTable(id) {
     document.getElementById(id).querySelector("tbody").appendChild(fila);
   }
 }
+
+getSavedTable("try-table-x8");
+getSavedTable("try-table-x18");
+getSavedTable("try-table-x32");
+getSavedTable("time-table-x32");
+getSavedTable("time-table-x18");
+getSavedTable("time-table-x8");
 
 //adding click event listener for all cards, and calls flipCard().
 cards.forEach((card) => card.addEventListener("click", flipCard));
