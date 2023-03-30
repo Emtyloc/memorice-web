@@ -133,7 +133,6 @@ function youWin() {
   saveTableData("time-table-x32");
   saveTableData("time-table-x18");
   saveTableData("time-table-x8");
-  setTimeout(() => alert("Ganaste el modo x" + gameMode.toString() + "!"), 500);
   clearInterval(runningTimer);
   showReplayGame();
 }
